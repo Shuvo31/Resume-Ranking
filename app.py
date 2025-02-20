@@ -10,7 +10,7 @@ from io import BytesIO
 app = FastAPI(title="Resume Ranking", description="API to extract ranking criteria and score resumes.", version="1.0")
 
 # Initialize OpenAI client
-client = OpenAI(api_key = 'your_api_key')
+client = OpenAI(api_key = 'your-api-key')
 
 def extract_text_from_pdf(file: UploadFile) -> str:
     doc = fitz.open(stream=file.file.read(), filetype="pdf")
